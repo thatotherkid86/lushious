@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<!--[if lt IE 8 ]>
+<html lang="en" class="ie7">
+<![endif]-->
+<!--[if IE 8 ]>
+<html lang="en" class="ie8">
+<![endif]-->
+<!--[if IE 9 ]>
+<html lang="en" class="ie9">
+<![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!-->
+<html lang="en">
+<!--<![endif]-->
+<head>
+    <title>Lushious World - Coming Spring 2022</title>
+    <meta charset="UTF-8">
+    <meta name="author" content="">
+    <meta name="keywords" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="fav.png" type="image/x-icon">
+    <link rel="icon" href="fav.png" type="image/x-icon">
+
+    <!-- Style CSS -->
+    <link href="css/bootstrap.css" media="screen" rel="stylesheet">
+    <link href="css/font-awesome.css" media="screen" rel="stylesheet">
+    <link href="style.css" media="screen" rel="stylesheet">
+
+    <!-- Custom Lushious -->
+    <style type="text/css">
+
+        .lushious-logo {
+            height: auto;
+            width: 100%;
+            max-width: 215px;
+        }
+
+        .lushious-bg {
+            display: block;
+            height: 100vh;
+            width: 100vw;
+            background-color: rgb(0 0 0 / 75%);
+            background-image: url("images/lushious/lushious-world-bg.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+            z-index: 10;
+            position: fixed;
+        }
+
+        @font-face {
+            font-family: 'HK Grotesk';
+            src: url('fonts/HKGrotesk-Regular.eot');
+            src: url('fonts/HKGrotesk-Regular.eot?#iefix') format('embedded-opentype'),
+            url('fonts/HKGrotesk-Regular.woff2') format('woff2'),
+            url('fonts/HKGrotesk-Regular.woff') format('woff'),
+            url('fonts/HKGrotesk-Regular.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: 'WindsorD-Bol';
+            src: url('fonts/WindsorD-Bol.eot');
+            src: url('fonts/WindsorD-Bol.eot?#iefix') format('embedded-opentype'),
+            url('fonts/WindsorD-Bol.woff2') format('woff2'),
+            url('fonts/WindsorD-Bol.woff') format('woff'),
+            url('fonts/WindsorD-Bol.ttf') format('truetype');
+            font-weight: bold;
+            font-style: normal;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: 'WindsorD-Bol';
+            src: url('fonts/WindsorD-Bol_1.eot');
+            src: url('fonts/WindsorD-Bol_1.eot?#iefix') format('embedded-opentype'),
+            url('fonts/WindsorD-Bol_1.woff2') format('woff2'),
+            url('fonts/WindsorD-Bol_1.woff') format('woff'),
+            url('fonts/WindsorD-Bol_1.ttf') format('truetype');
+            font-weight: bold;
+            font-style: normal;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: 'HK Grotesk-SB';
+            src: url('fonts/HKGrotesk-SemiBold.eot');
+            src: url('fonts/HKGrotesk-SemiBold.eot?#iefix') format('embedded-opentype'),
+            url('fonts/HKGrotesk-SemiBold.woff2') format('woff2'),
+            url('fonts/HKGrotesk-SemiBold.woff') format('woff'),
+            url('fonts/HKGrotesk-SemiBold.ttf') format('truetype');
+            font-weight: 600;
+            font-style: normal;
+            font-display: swap;
+        }
+
+
+        h1, h2, h3, h4, h5, h6,
+        .home-video .wrap-video-content .video-content .home-info .video-title,
+        .home-video .wrap-video-content .video-content a.btn {
+            font-family: 'WindsorD-Bol';
+        }
+
+        .home-video .wrap-video-content .video-content .home-info .video-title {
+            font-size: 72px;
+        }
+
+        .home-video .wrap-video-content .video-content .home-info .video-title-before,
+        .product-subtotal {
+            font-family: 'HK Grotesk';
+            text-transform: uppercase;
+        }
+
+        .product-subtotal {
+            color: #333333;
+            font-family: 'HK Grotesk-SB';
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            font-weight: 700;
+            line-height: 150%;
+            font-size: 12px;
+        }
+
+        .other-page.wrap-contact-forms .link-email a,
+        .home-video .wrap-video-content .video-content .home-info .video-title-before {
+            letter-spacing: 2px;
+        }
+
+        html,
+        body {
+            background-color: #F0CDC3;
+        }
+
+        .cart-wrapper,
+        .theme-menu {
+            background-color: #ffffff;
+        }
+
+        .theme-menu .menu ul li {
+            margin-bottom: 22px;
+        }
+
+        .other-page.wrap-contact-forms h3.page-title,
+        .cart-wrapper .shop-cart-title,
+        .theme-menu .menu-title {
+            color: #B42025;
+            margin-bottom: 45px;
+            letter-spacing: 1px;
+        }
+
+        header.header.header-light .logo-wrap .theme-logo, header.header.header-light .header-cart .cart-link {
+            color: #333;
+        }
+
+        header.header.header-light .header-cart .cart-link span {
+            color: #333;
+            border-color: #333;
+        }
+
+        header.header.header-light .menu-link-wrap .menu-link span, header.header.header-light .menu-link-wrap .menu-link:before, header.header.header-light .menu-link-wrap .menu-link:after {
+            background: #333;
+        }
+
+        .cart-wrapper img {
+            margin-bottom: 45px;
+        }
+
+        .home-video .wrap-video-content .video-content a.btn {
+            border-radius: 50px;
+            letter-spacing: 1px;
+        }
+
+        .home-video .wrap-video-content .video-content a.btn:hover {
+            background-color: #B42025;
+            border-color: #B42025;
+        }
+
+        .link-email {
+            margin-bottom: 30px;
+        }
+
+    </style>
+</head>
+<body>
+<!-- Spinner -->
+<div class="spinner-container">
+    <div class="spinner-dot"></div>
+    <div class="spinner-dot"></div>
+    <div class="spinner-dot"></div>
+</div>
+<!-- /Spinner -->
+<!-- Theme Menu -->
+<div class="theme-menu">
+    <a href="#" class="menu-header-close-button-mobile"></a>
+    <div class="menu-header">
+        <h3 class="menu-title">MENU</h3>
+        <nav class="menu">
+            <ul>
+                <li><a href="about.html">ABOUT</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="menu-footer">
+        <ul class="menu-social">
+            <li class="social-icon">
+                <a href="https://www.instagram.com/" target="_blank"><i class="fa fa-instagram"></i></a>
+            </li>
+        </ul>
+    </div>
+</div>
+<!-- End Theme Menu -->
+<div id="page" class="site invisible">
+    <!-- Header -->
+    <header class="header header-light">
+        <div class="menu-link-wrap">
+            <a href="#" class="menu-link">
+                <span></span>
+            </a>
+        </div>
+        <div class="logo-wrap">
+            <a href="/" class="theme-logo">
+                <img class="lushious-logo" src="images/lushious/lushious-world-logo.png">
+            </a>
+        </div>
+        <div class="header-cart">
+            <a href="#" class="cart-link">
+                <strong>CART</strong>
+                <span>0</span></a>
+        </div>
+    </header>
+    <!-- End Header -->
+    <!--Contact Page-->
+    <div class="site-main clearfix">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="wrap-contact-forms other-page margin-top-140">
+                        <!--Title-->
+                        <h3 class="page-title">get in touch</h3>
+                        <div class="link-email">
+                            <h3>General</h3>
+                            <a href="mailto:general@lushiousworld.com">general@lushiousworld.com</a>
+                        </div>
+                        <div class="link-email">
+                            <h3>Press</h3>
+                            <a href="mailto:press@lushiousworld.com">press@lushiousworld.com</a>
+                        </div>
+                        <div class="link-email">
+                            <h3>Careers</h3>
+                            <a href="mailto:careers@lushiousworld.com">careers@lushiousworld.com</a>
+                        </div>
+                        <div class="link-email">
+                            <h3>Influencers</h3>
+                            <a href="mailto:influencers@lushiousworld.com">influencers@lushiousworld.com</a>
+                        </div>
+                        <!--End Title-->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Shop Cart -->
+<div class="cart-wrapper">
+    <a href="#" class="shop-cart-close"></a>
+    <div class="cart-header">
+        <h3 class="shop-cart-title">SHOPPING CART</h3>
+
+        <img src="images/lushious/lushious-disco-print-presale-promo-light.png">
+
+        <div class="product-subtotal">
+            <span>hey hey! the shop's not open yet, but be sure to bookmark and save #dayone for a future promo.</span><br><br>
+            <span>With love,</span><br>
+            <span>Atlanta, Founder & CEO</span>
+        </div>
+    </div>
+</div>
+<!-- End Shop Cart -->
+
+<!-- main JS libs  -->
+<script src="js/lib/jquery-1.12.2.min.js"></script>
+<script src="js/lib/bootstrap.min.js"></script>
+<!-- Modernizr Library -->
+<script src="js/lib/modernizr.min.js"></script>
+
+<!--[if lt IE 9]>
+<script src="js/lib/html5shiv.js"></script>
+<script src="js/lib/respond.min.js"></script>
+<![endif]-->
+
+
+<!-- Input Numer 'Spinner' -->
+<script src="js/jquery.spinner.js"></script>
+
+<!--General JS-->
+<script src="js/general.js"></script>
+</body>
+</html>

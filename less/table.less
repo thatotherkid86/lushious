@@ -1,0 +1,53 @@
+/*-----------------------------------*/
+/*           Table Styles            */
+/*-----------------------------------*/
+
+table {
+  border: 1px solid @table-border-color;
+  width: 100%;
+  margin-top: 30px;
+  margin-bottom: 40px;
+  color: @primary-color;
+  font-size: @font-size + 2;
+
+  tr{
+    border-top: 1px solid @table-border-color;
+
+    &:first-child{
+      border: none;
+    }
+    th,
+    td {
+      border-left: 1px solid @table-border-color;
+      padding: 20px 15px;
+
+      &:first-child {
+        border-left: none;
+        font-weight: bold;
+      }
+    }
+    th{
+      font-weight: bold;
+    }
+  }
+}
+/*----> Responsive <---- */
+/* Screen 568px */
+@media(max-width:767px){
+  table tr th,
+  table tr td {
+    padding: 10px;
+  }
+}
+/* Screen 320px */
+@media(max-width:479px){
+  table {
+    font-size: 11px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+  }
+  table tr th,
+  table tr td {
+    padding: 2px;
+  }
+}

@@ -1,0 +1,75 @@
+/*-----------------------------------*/
+/*            Login Style            */
+/*-----------------------------------*/
+
+.wrap-login-forms {
+  .page-title {
+    font-size: @font-size + 8;
+    letter-spacing: 7px;
+    margin-bottom: 50px;
+  }
+  .login-forms {
+    margin: 0 auto;
+
+    .lost_password,
+    .create-account {
+      a {
+        font-size: @font-size - 2;
+        color: @primary-color;
+        letter-spacing: 4px;
+        font-weight: bold;
+        text-transform: uppercase;
+      }
+    }
+    .lost_password {
+      margin-bottom: 40px;
+    }
+    .create-account {
+      text-align: center;
+      margin-bottom: 0;
+    }
+    input[type="submit"].button {
+      &:extend(.btn all, .btn.btn-1 all);
+      margin-bottom: 42px;
+    }
+  }
+}
+
+/*----> Responsive <---- */
+/* Screen 1400px */
+@media(max-width:1400px){
+  .other-page.wrap-login-forms[class*="margin-top-"] {
+    margin-top: 70px;
+  }
+}
+
+/* Screen 1024px */
+@media(max-width:1199px){
+  .other-page.wrap-login-forms[class*="margin-top-"] {
+    margin-top: 55px;
+  }
+}
+
+/* Screen 768px */
+@media(max-width:991px){
+  .other-page.wrap-login-forms[class*="margin-top-"] {
+    margin-top: 150px;
+  }
+}
+
+/* Screen 568px */
+@media(max-width:767px){
+  .other-page.wrap-login-forms[class*="margin-top-"] {
+    margin-top: 70px;
+  }
+  .other-page.wrap-login-forms h3.page-title[class*="margin-top-"] {
+    margin-bottom: 45px;
+  }
+}
+
+/* Screen 320px */
+@media(max-width:479px){
+  .other-page.wrap-login-forms[class*="margin-top-"] {
+    margin-top: 60px;
+  }
+}

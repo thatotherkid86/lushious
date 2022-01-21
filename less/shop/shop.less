@@ -1,0 +1,189 @@
+/*-----------------------------------*/
+/*           Shop Styles             */
+/*-----------------------------------*/
+.shop-page {
+  &.shop-page-product-list {
+    .site-main {
+      padding-bottom: 0;
+    }
+  }
+  &.shop-page-product-details {
+    .site-main {
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+  }
+}
+.shop-product-list {
+  margin-bottom: 34px;
+
+  /* Product categories nav */
+  .categories-list {
+    margin-bottom: 50px;
+
+    ul.categories-list-nav {
+      text-align: center;
+
+      li {
+        display: inline-block;
+        margin-right: 67px;
+        font-size: floor(@font-size*0.8);
+        font-weight: bold;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+
+        &:last-child {
+          margin-right: 0;
+        }
+
+        a {
+          color: #8c8c8c;
+          position: relative;
+
+          &:before {
+            content: '';
+            position: absolute;
+            width: 14px;
+            height: 1px;
+            background-color: @base-color5;
+            bottom: -17px;
+            left: 50%;
+            margin-left: -7px;
+            opacity: 0;
+            .transition(opacity 0.3s ease);
+          }
+        }
+        &.active-category,
+        &:hover {
+          border: none;
+
+          a {
+            color: @base-color5;
+
+            &:before {
+              opacity: 1;
+            }
+          }
+        }
+      }
+    }
+  }
+  /* Product list */
+  .products {
+    min-height: 550px;
+    padding: 0 42px;
+
+    li.product {
+      margin-top: 35px;
+      .transition(display 0.1s ease);
+      padding-right: 9px;
+      padding-left: 9px;
+
+      h3 {
+        font-size: floor(@font-size*0.8);
+        font-weight: bold;
+        letter-spacing: 4px;
+        text-align: center;
+        text-transform: uppercase;
+        padding-top: 29px;
+      }
+      a.loop-product-link {
+        position: relative;
+        display: block;
+
+        img {
+          max-width: 100%;
+          z-index: 10;
+        }
+        &:hover {
+          .image-hover {
+            opacity: 1;
+
+          }
+          h3 {
+            color: @base-color5;
+          }
+        }
+        .image-hover {
+          position: absolute;
+          opacity: 0;
+          z-index: 11;
+          left: 0;
+          top: 0;
+          .transition(opacity 0.2s ease);
+        }
+      }
+    }
+    .amount {
+      color: #8c8c8c;
+      font-size: ceil(@font-size*0.8);
+      text-align: center;
+      width: 100%;
+      display: block;
+      padding-top: 6px;
+    }
+  }
+}
+
+
+/*-----------------------------------*/
+/*        Import Shop Element        */
+/*-----------------------------------*/
+@import "shop-cart.less";
+@import "shop-login.less";
+@import "shop-reset-password.less";
+@import "shop-create-account.less";
+@import "shop-checkout.less";
+@import "shop-details.less";
+
+/*----> Responsive <---- */
+/* Screen 1400px */
+@media(max-width:1400px){
+  .shop-product-list {
+    margin-bottom: 90px;
+  }
+}
+/* Screen 1024px */
+@media(max-width:1199px){
+  .shop-product-list.shop-product-list-3-columns .products li.product h3 {
+    letter-spacing: 2px;
+  }
+}
+/* Screen 768px */
+@media(max-width:991px){
+  .shop-product-list.shop-product-list-3-columns .products li.product h3 {
+    letter-spacing: 0;
+    font-size: 10px;
+  }
+}
+/* Screen 568px */
+@media(max-width:767px){
+  .shop-product-list .categories-list ul.categories-list-nav li {
+    margin-right: 45px;
+  }
+  .shop-product-list .products {
+    padding: 0;
+  }
+  .shop-product-list .products li.product h3 {
+    font-size: 10px;
+    letter-spacing: 2px;
+    line-height: 17px;
+  }
+  .shop-product-list {
+    margin-bottom: 70px;
+  }
+}
+/* Screen 320px */
+@media(max-width:479px){
+  .shop-product-list .products li.product {
+    width: 100%;
+    float: none;
+  }
+  .shop-product-list .categories-list ul.categories-list-nav li {
+    margin-right: 40px;
+    line-height: 41px;
+  }
+  .shop-product-list .categories-list {
+    margin-bottom: 20px;
+  }
+}

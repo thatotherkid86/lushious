@@ -1,0 +1,186 @@
+/*-----------------------------------*/
+/*           Form Style              */
+/*-----------------------------------*/
+
+/*Forms Style*/
+.placeholder(@color: #a9a9a9);
+
+form {
+  width: 407px;
+
+  input[type="text"],
+  input[type="password"],
+  input[type="search"],
+  input[type="url"],
+  input[type="email"],
+  input[type="tel"],
+  input[type="number"],
+  textarea {
+    font-size: 10px;
+    font-weight: bold;
+    border: none;
+    border-bottom: 1px solid @primary-color;
+    width: 100%;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    padding-bottom: 14px;
+    margin-bottom: 30px;
+    background-color: transparent;
+  }
+  textarea {
+    min-height: 87px;
+    margin-bottom: 19px;
+    resize: vertical;
+  }
+  input[type="submit"],
+  input.submit {
+    width: 100%;
+  }
+  p {
+    margin-bottom: 0;
+  }
+}
+
+/* Styling Input number */
+.spinner {
+  position: relative;
+  width: 90px;
+  height: 35px;
+
+  input.qty {
+    font-size: 15px;
+    color: @primary-color;
+    width: 100%;
+    height: 100%;
+    border: 1px solid #f3f3f3;
+    background: transparent;
+    text-align: center;
+  }
+  .spinner-controls {
+    a {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      line-height: 37px;
+      padding: 0 6px;
+      font-size: 22px;
+      color: @primary-color;
+    }
+    .spin-up {
+      right: 0;
+    }
+    .spin-down {
+      left: 1px;
+    }
+  }
+}
+
+// Selectize styling
+.selectize-control.single {
+  .selectize-input {
+    border: none;
+    border-radius: 0;
+    .box-shadow(none);
+    padding: 13px 10px 14px 21px;
+    border-bottom: 1px solid @primary-color;
+    background: transparent;
+
+    .item {
+      font-size: 10px;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      color: @primary-color;
+    }
+
+    &:after {
+      border-color: #dddddd transparent transparent transparent;
+      right: 11px;
+    }
+    &.input-active {
+      background: transparent;
+    }
+    &.dropdown-active {
+      &:after {
+        border-color: transparent transparent #dddddd transparent;
+      }
+    }
+  }
+}
+
+/* Custom CheckBox  & Radio */
+/* Styled Checkboxes, Radios */
+/*-----------------------------------*/
+.custom-checkbox,
+.custom-radio {
+  position: relative;
+}
+.custom-checkbox::selection,
+.custom-radio::selection {
+  background: transparent;
+  color: inherit;
+}
+.custom-checkbox input,
+.custom-radio input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+.custom-checkbox label,
+.custom-radio label {
+  position: relative;
+  display: inline-block;
+  font-size: @font-size + 2;
+  font-weight: 400;
+  color:  @base-color3;
+  line-height: 17px;
+  padding: 0 0 0 26px;
+  margin-bottom: 21px;
+  cursor: pointer;
+  min-height: 17px;
+}
+.custom-checkbox label::selection,
+.custom-radio label::selection {
+  background: transparent;
+  color: inherit;
+}
+.custom-checkbox label.focus,
+.custom-radio label.focus {
+  outline: none;
+}
+.custom-checkbox label:before,
+.custom-radio label:before,
+.custom-checkbox label:after,
+.custom-radio label:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.custom-checkbox label:before,
+.custom-radio label:before {
+  width: 17px;
+  height: 17px;
+  border: 1px solid @secondary-color;
+  border-radius: 3px;
+}
+.custom-checkbox label.checked:after,
+.custom-radio label.checked:after {
+  width: 9px;
+  height: 9px;
+  margin: 4px;
+  background-color: @base-color5;
+  border-radius: 2px;
+}
+.custom-radio label:before,
+.custom-radio label.checked:after {
+  border-radius: 50%;
+}
+
+/*----> Responsive <---- */
+/* Screen 320px */
+@media(max-width:479px){
+  form {
+    max-width: 100%;
+  }
+}

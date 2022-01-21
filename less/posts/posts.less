@@ -1,0 +1,123 @@
+/*-----------------------------------*/
+/*          Posts Styling            */
+/*-----------------------------------*/
+.postlist {
+  .postlist-col {
+    margin-bottom: 30px;
+
+    .post-thumbnail {
+      .overlay-post {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-color: @base-color4;
+        opacity: 0;
+        .transition(all 0.3s ease);
+      }
+      &:hover {
+        .overlay-post {
+          opacity: 0.2;
+        }
+      }
+    }
+  }
+}
+.post {
+  .post-thumbnail {
+    display: block;
+    position: relative;
+  }
+  .post-content {
+    background-color: @post-bg;
+    color: @secondary-color;
+    padding: 23px 27px;
+
+    p:last-child {
+      margin-bottom: 0;
+    }
+    img {
+      width: 100%;
+    }
+    h6 {
+      font-size: @font-size + 2;
+      font-weight: bold;
+      color: @post-title-color;
+      margin-bottom: 10px;
+    }
+  }
+  .entry-meta {
+    background-color: @post-bg;
+    color: @base-color3;
+    padding: 18px 10px 18px 28px;
+    margin-top: 3px;
+    font-size: ceil(@font-size*0.8);
+    font-weight: bold;
+
+    a {
+      color: @base-color3;
+      display: block;
+    }
+    .entry-date,
+    .cat-links,
+    .meta-divider,
+    .comments-link {
+      color: @base-color3;
+      display: inline-block;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+    }
+    .meta-divider {
+      padding-left: 12px;
+      padding-right: 12px;
+    }
+  }
+}
+.more-info {
+  margin-top: 55px;
+  text-align: center;
+
+  a {
+    text-transform: uppercase;
+    font-size: @font-size - 2;
+    font-weight: bold;
+    color: @base-color1;
+    letter-spacing: 3.5px;
+  }
+}
+.sidebar{
+  padding-left: 45px;
+  padding-top: 18px;
+}
+
+
+/*-----------------------------------*/
+/*  Including Posts Details Styling  */
+/*-----------------------------------*/
+
+@import "post-details.less";
+@import "widget.less";
+
+
+/*----> Responsive <---- */
+/* Screen 1024px */
+@media(max-width:1199px){
+  .post .entry-meta .meta-divider {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+}
+/* Screen 768px */
+@media(max-width:991px){
+  .sidebar {
+    margin-top: 60px;
+  }
+}
+/* Screen 320px */
+@media(max-width:479px){
+  .postlist .postlist-col {
+    width: 100%;
+    float: none;
+  }
+}

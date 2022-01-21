@@ -1,0 +1,49 @@
+/*-----------------------------------*/
+/*              Buttons              */
+/*-----------------------------------*/
+
+.btn {
+  font-family: @font-family;
+  font-size: @button-font-size;
+  line-height: @button-font-size - 1;
+  font-weight: bold;
+  border-radius: 0;
+  text-transform: uppercase;
+  padding: @button-padding-tb @button-padding-lr;
+  letter-spacing: @button-letter-spacing;
+  border: 1px solid transparent;
+  display: inline-block;
+  text-align: center;
+  box-sizing: border-box;
+  .transition(all 0.3s ease);
+
+  /* Button 1 */
+  &.btn-1 {
+    color: @button-color;
+    border-color: @button-color-bg;
+    background-color: @button-color-bg;
+  }
+  /* Button 2 */
+  &.btn-2 {
+    background-color: transparent;
+    border-color: @button-color-bg;
+    color: @button-color-bg;
+
+    &:hover {
+      color: @button-color;
+    }
+  }
+  &:hover {
+    background-color: @base-color5;
+    border-color: @base-color5;
+  }
+}
+
+/*----> Responsive <---- */
+/* Screen 568px */
+@media(max-width:767px){
+  .btn {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}

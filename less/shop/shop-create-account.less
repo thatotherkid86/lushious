@@ -1,0 +1,84 @@
+/*-----------------------------------*/
+/*            Login Style            */
+/*-----------------------------------*/
+
+.wrap-account-forms {
+  h3.page-title {
+    font-size: @font-size + 8;
+    letter-spacing: 7px;
+    margin-bottom: 50px;
+  }
+  .account-forms {
+    margin: 0 auto;
+
+    .form-row {
+      input.name{
+        width: 46%;
+        float: left;
+      }
+      input.last-name{
+        width: 46%;
+        float: right;
+      }
+      input[ placeholder="password"] {
+        margin-bottom: 25px;
+      }
+    }
+    input[type="submit"].button {
+      &:extend(.btn all, .btn.btn-1 all);
+      margin-bottom: 37px;
+    }
+    .create-account {
+      text-align: center;
+      a {
+        font-size: @font-size - 2;
+        color: @secondary-color;
+        font-weight: bold;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+      }
+      .create-account-login{
+        color: @base-color1;
+      }
+    }
+  }
+}
+
+/*----> Responsive <---- */
+/* Screen 1400px */
+@media(max-width:1400px){
+  .other-page.wrap-account-forms[class*="margin-top-"] {
+    margin-top: 75px;
+  }
+}
+
+/* Screen 1024px */
+@media(max-width:1199px){
+  .other-page.wrap-account-forms[class*="margin-top-"] {
+    margin-top: 55px;
+  }
+}
+
+/* Screen 768px */
+@media(max-width:991px){
+  .other-page.wrap-account-forms[class*="margin-top-"] {
+    margin-top: 150px;
+  }
+}
+
+/* Screen 568px */
+@media(max-width:767px){
+  .other-page.wrap-account-forms[class*="margin-top-"] {
+    margin-top: 70px;
+  }
+  .other-page.wrap-account-forms h3.page-title[class*="margin-top-"] {
+    margin-bottom: 45px;
+  }
+}
+
+/* Screen 320px */
+@media(max-width:479px){
+  .other-page.wrap-account-forms[class*="margin-top-"] {
+    margin-top: 60px;
+  }
+}
